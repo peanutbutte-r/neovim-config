@@ -7,6 +7,10 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Plugins
 " Status Line
 Plug 'nvim-lualine/lualine.nvim'
+" File Explorer
+Plug 'nvim-tree/nvim-tree.lua'
+" Icons
+Plug 'nvim-tree/nvim-web-devicons'
 " Highlighter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " LSP
@@ -51,7 +55,7 @@ set mouse=a
 " ===========================
 " Colorscheme
 " ===========================
-colorscheme catppuccin 
+colorscheme onedark 
 
 " ===========================
 " Treesitter setup (Lua block)
@@ -75,6 +79,14 @@ require('lualine').setup {
     theme = 'auto'
   }
 }
+EOF
+
+" ===========================
+" Nvim Tree 
+" ===========================
+lua << EOF
+require("nvim-tree").setup()
+vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeOpen<CR>', { noremap = true, silent = true })
 EOF
 
 " ===========================
