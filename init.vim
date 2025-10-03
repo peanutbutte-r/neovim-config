@@ -86,7 +86,7 @@ EOF
 " ===========================
 lua << EOF
 require("nvim-tree").setup()
-vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeOpen<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 EOF
 
 " ===========================
