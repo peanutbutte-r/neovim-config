@@ -2,7 +2,6 @@
 " init.vim
 " ===========================
 
-" Specify where plugins will be installed
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Plugins
@@ -108,7 +107,7 @@ cmp.setup({
 EOF
 
 " =============================
-" Pyright
+" Pyright && Clangd
 " =============================
 lua << EOF
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
