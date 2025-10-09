@@ -39,6 +39,10 @@ set relativenumber
 " Enable syntax highlighting
 syntax on
 
+" Enable Copying to clipboard
+set clipboard=unnamed
+set clipboard=unnamedplus
+
 " Better searching
 set ignorecase
 set smartcase
@@ -52,6 +56,10 @@ set smartindent
 " Enable mouse
 set mouse=a
 
+" Keymap for opening temrinal
+lua << EOF
+vim.api.nvim_set_keymap('n', '<C-t>', ':term<CR>', { noremap = true, silent = true })
+EOF
 " ===========================
 " Colorscheme
 " ===========================
